@@ -237,7 +237,8 @@
       <p class="text-xl text-gray-600 mb-6">i love you so much baby!!</p>
       <button
         class="text-2xl mb-4 text-red-600 hover:text-black transition-colors"
-        on:click={() => (window.location.href = "https://www.example.com")}
+        on:click={() =>
+          (window.location.href = "https://valentines.nesetk.com/")}
       >
         now for the next step.. click on me
       </button>
