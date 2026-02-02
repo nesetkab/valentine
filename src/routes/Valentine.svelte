@@ -200,7 +200,6 @@
   <div
     class="min-h-screen min-w-screen flex items-center justify-center relative"
   >
-    <!-- Go Back Button -->
     <button
       on:click={goBackToHome}
       class="absolute top-6 left-6 flex items-center gap-2 text-black hover:text-gray-200 transition-colors"
@@ -219,7 +218,7 @@
     </button>
 
     <div
-      class="bg-white rounded-3xl shadow-2xl p-12 max-w-lg w-full text-center"
+      class="bg-white rounded-3xl border-black border p-12 max-w-lg w-full text-center"
     >
       <div class="mb-6 flex justify-center">
         <svg
