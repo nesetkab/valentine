@@ -246,11 +246,11 @@
   </div>
 {:else if stage === "captcha"}
   <div
-    class="min-h-screen min-w-screen bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 flex items-center justify-center p-4 relative"
+    class="min-h-screen min-w-screen flex items-center justify-center p-4 relative"
   >
     <button
       on:click={goBackToHome}
-      class="absolute top-6 left-6 flex items-center gap-2 text-white hover:text-gray-300 transition-colors"
+      class="absolute top-6 left-6 flex items-center gap-2 text-black hover:text-gray-300 transition-colors"
     >
       <svg
         class="w-5 h-5"
@@ -265,11 +265,11 @@
       <span class="font-semibold">back</span>
     </button>
 
-    <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full">
+    <div class="bg-white rounded-2xl border border-black p-8 max-w-md w-full">
       <div class="mb-6">
         <div class="flex items-center mb-2">
           <h2 class="text-2xl font-bold text-gray-800">
-            human verification required
+            human verification required in order to say no
           </h2>
         </div>
         <div class="w-full bg-gray-200 rounded-full h-2">
@@ -328,9 +328,11 @@
 {:else}
   <div class="min-h-screen min-w-screen flex items-center justify-center">
     <div
-      class="bg-white rounded-3xl shadow-2xl p-12 max-w-md w-full text-center"
+      class="rounded-3xl p-12 max-w-md border-black border justify-center w-full text-center"
     >
-      <div class="mb-8 flex justify-center text-2xl">hi baby</div>
+      <div class="mb-8 flex justify-center text-2xl animate-bounce">
+        hi baby
+      </div>
 
       <h1 class="text-5xl font-bold text-gray-800 mb-8">
         will u be my valentine? :3
@@ -357,17 +359,16 @@
   </div>
 {/if}
 
-<!-- Warning Popup -->
 {#if showWarningPopup}
-  <div
-    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
-  >
+  <div class="fixed inset-0 flex items-center justify-center p-4 z-50">
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+
     <div
-      class="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full text-center animate-bounce"
+      class="bg-white rounded-2xl p-8 max-w-sm w-full text-center relative z-10"
     >
       <h1 class="font-bold text-gray-800 mb-4">uh oh!</h1>
       <p class="text-lg text-gray-800 mb-6">
-        looks like we need to verify if you're a human...
+        in order to say no, you need to prove that you're a human...
       </p>
       <button
         on:click={proceedToCaptcha}
