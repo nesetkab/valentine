@@ -198,7 +198,7 @@
 
 {#if stage === "success"}
   <div
-    class="min-h-screen min-w-screen flex items-center justify-center relative"
+    class="min-h-screen min-w-screen bg-pink-300 flex items-center justify-center relative"
   >
     <button
       on:click={goBackToHome}
